@@ -10,7 +10,7 @@ import dagger.hilt.components.SingletonComponent
 class LoggerModule {
 
     @Provides
-    fun provideLogger() : ConsoleLogger{
+    fun provideLogger() : ILooger{
         return  ConsoleLogger()
     }
 }

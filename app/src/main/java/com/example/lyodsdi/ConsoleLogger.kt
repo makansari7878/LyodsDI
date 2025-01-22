@@ -4,9 +4,13 @@ import android.util.Log
 import javax.inject.Inject
 
 
-class ConsoleLogger @Inject constructor() {
+interface  ILooger{
+    fun log(msg: String)
+}
 
-    fun log(msg : String){
+class ConsoleLogger @Inject constructor() : ILooger {
+    override fun log(msg: String) {
         Log.i("logtag",msg)
     }
+
 }
